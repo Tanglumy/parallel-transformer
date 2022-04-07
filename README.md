@@ -7,7 +7,12 @@ transformer is a very hot NLP model in recent years, the model uses the architec
 
 ## optimize target
 using SIMD,OpenMP,MPI to optimize Transformer attention block. This repo considers unroll, SSE, OpenMP, tile and cuda to compare all the parallel functions.
-
+## how to run the code
+```shell
+mkdir build
+cd build
+cmake ..    
+```
 ## experiments results
 
 using speedup to compare all the results.
