@@ -2,6 +2,7 @@
 #include <pmmintrin.h>
 #include <xmmintrin.h>
 using namespace std;
+
 void normal_gemm(float **A, float **B, float **C, const int m, const int n,
                  int k) {
   for (int i = 0; i < m; i++) {
@@ -14,7 +15,7 @@ void normal_gemm(float **A, float **B, float **C, const int m, const int n,
     }
   }
 }
-void SSE_gemm(float **A, float **B, int m, int n, int k) {
+void SSE_gemm(float **A, float **B, float **C, int m, int n, int k) {
   __m128 t1, t2, sum;
   for (int i = 0; i < m; i++) {
     for (int j = 0; j < n; j++) {
